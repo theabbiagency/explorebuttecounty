@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Butte - Scroll Example</title>
+</head>
+<body>
+  <img class="nav" src="nav.png" alt="">
+  <div class="center">
+    <section class="hero">
+      <div class="white"></div>
+
+    </section>
+    <section class="intro">
+      <img class="dark" src="explore-dark.png">
+      <img class="body" src="body.png">
+      <img class="cta" src="cta.png">
+    </section>
+  </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 500 ) {
+      $('.dark').addClass('stick');
+      $('.body, .cta').fadeIn(600);
+    } else {
+      $('.dark').removeClass('stick');
+      $('.body, .cta').fadeOut(600);
+    }
+  });
+
+</script>
+
+</html>

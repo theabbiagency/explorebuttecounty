@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Signature</title>
+	<style>
+		*::selection {
+			background: #5B8191;
+			color: #fff;
+		}
+		body {
+			margin: 70px;
+			font-family: arial black, sans-serif;
+			letter-spacing: .5px;
+			color: #4E5843;
+		}
+		a {
+			color: #FDB733;
+		}
+		.container {
+			max-width: 1100px;
+			display: -webkit-box;
+		    display: -moz-box;
+		    display: -webkit-flex;
+		    display: -ms-flexbox;
+		    display: box;
+		    display: flex;
+		    -webkit-box-pack: justify;
+		    -moz-box-pack: justify;
+		    -o-box-pack: justify;
+		    -ms-flex-pack: justify;
+		    -webkit-justify-content: space-between;
+		    justify-content: space-between;
+		}
+		form {
+			margin-top: 52px
+		}
+		fieldset {
+			width: 270px;
+			border: 0;
+			margin-bottom: 20px;
+		}
+		.inputcontainer {
+			position: relative;
+		}
+		legend, label {
+			letter-spacing: 1px
+		}
+		legend {
+			margin-left: 8px;
+			font-size: .825rem;
+		}
+		label {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: .825rem;
+			color: #D0D2D3;
+			pointer-events: none;
+			transition: all .15s
+		}
+		input {
+			display: block;
+			width: 100%;
+			padding: .625em;
+			margin: 2em 0;
+			border: none;
+			font-size: 1rem;
+			letter-spacing: .5px;
+			border-bottom: solid 1px #D0D2D3;
+		}
+		input:focus {
+			outline: none;
+			border-bottom: solid 1px #FDB733;
+		}
+		input:focus ~ label {
+			top: -15px;
+			color: #4E5843;
+			font-size: .625rem;
+		}
+		.filled {
+			top: -15px;
+			font-size: .625rem;
+		}
+		h1 {
+			display: inline-block;
+			margin: 0;
+			padding: .25em;
+			font-size: 1.5rem;
+			line-height: .8125em;
+			letter-spacing: -.04em;
+			text-transform: uppercase;
+			background-color: #FDB733;
+			color: white;
+		}
+		.instructions {
+			margin: 0 25px 0 140px;
+		}
+		.instructions p {
+			font-size: .875rem;
+			position: relative;
+			margin: 3.625em 0;
+		}
+		.number {
+			font-size: 1.75rem;
+			color: #D0D2D3;
+			position: absolute;
+			top: -.6875rem;
+			left: -3rem;
+		}
+		hr {
+			margin: 50px 0 100px 0;
+			border: solid 1px #FDB733;
+			clear: both;
+		}
+		@media (max-width: 1000px) {
+			.instructions {
+				-webkit-flex-basis: auto;
+				flex-basis: auto;
+			}
+		}
+		@media (max-width: 850px) {
+			.container {
+				-webkit-box-direction: reverse;
+				-moz-box-direction: reverse;
+				-o-box-direction: reverse;
+				-webkit-box-orient: vertical;
+				-moz-box-orient: vertical;
+				-o-box-orient: vertical;
+				-webkit-flex-direction: column-reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+			}
+			.instructions {
+				margin: 0 25px;
+			}
+		}
+		.colorpicker {
+			margin-top: 20px;
+		}
+		.color {
+			display: inline-block;
+			width: 80px;
+			height: 30px;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<fieldset>
+				<legend>Required</legend>
+				<div class="inputcontainer">
+			        <input type="text" id="firstinput" autofocus>
+					<label for="firstinput">Name</label>
+				</div>
+				<div class="inputcontainer">
+			        <input type="text" id="titleinput">
+					<label for="titleinput">Job Title</label>
+				</div>
+				<div class="inputcontainer">
+					<input type="text" id="phoneinput">
+					<label for="phoneinput">Phone</label>
+				</div>
+				<legend>Color Picker</legend>
+				<div class="colorpicker">
+					<div class="color" style="background-color: #EF764A;"></div>
+					<div class="color" style="background-color: #5B8191;"></div>
+					<div class="color" style="background-color: #FDB733;"></div>
+					<div class="color" style="background-color: #A19F36;"></div>
+					<div class="color" style="background-color: #4E5843;"></div>
+				</div>
+			</fieldset>
+
+		</form>
+
+		<div class="instructions">
+			<h1>Email<br>Signature<br>Generator<br></h1>
+			<p><span class="number">1</span> Fill out the relevant fields.</p>
+			<p><span class="number">2</span> Highlight and copy everything below the long red line.</p>
+			<p><span class="number">3</span> Paste the copied content into your signature section <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">here</a>.</p>
+		</div>
+
+	</div>
+
+	<hr>
+
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr style="font-family: arial, sans-serif; font-size: 12px; color: #4E5843;">
+			<td class="logo" width="120" align="center" style="background-color: #5B8191">
+				<a href="http://explorebuttecounty.com" border="0"><img src="http://i.imgur.com/eWWxUDT.png" border="0" width="80" height="90" alt="Explore Butte County Logo"></a>
+			</td>
+			<td style="padding: 5px 20px; background-color: #f6f6f6">
+				<p style="font-family: Arial, sans-serif; font-weight: bold; font-size: 14px;">
+					<font color="#EF764A" id="first" style="color: #EF764A">FIRST</font>
+					<br>
+					<font color="#4E5843" id="title" style="font-family: arial, sans-serif; font-weight: normal; font-size: 12px; color: #4E5843; letter-spacing: .5px">title</font>
+				</p>
+				<p>
+					<span id="phone"></span>
+				</p>
+				<p>
+					<font color="#4E5843"><a style="color: #4E5843; text-decoration: none;" href="http://explorebuttecounty.com">Explore Butte County</a></font><br>
+					<font color="#4E5843" style="color: #4E5843; text-decoration: none;">P.O. Box 2154 Chico, CA 95926</font>
+				</p>
+			</td>
+		</tr>
+	</table>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$(function() {
+		$("#firstinput").keyup(function() {
+			var value = $(this).val();
+			$("#first").text(value);
+ 		});
+		$("#titleinput").keyup(function() {
+			var value = $(this).val();
+			$("#title").text(value);
+ 		});
+
+		$("#phoneinput").keyup(function() {
+			var value = $(this).val().replace(/\D/g,'').replace(/\s+/g, '');
+			if (value.charAt(0) == ""){
+				$("#phone").empty();
+			} else {
+				if (value.length > 10 & value.charAt(0) == "1") {
+					value = value.slice(1,11);
+				} else {
+					value = value.slice(0,10);
+				}
+				var tel = "+1"+value
+				var display = value.replace(/(.{4})$/, " $1").replace(/(.{8})$/, " $1");
+				$("#phone").html(
+					'<font color="#4E5843"><a style="color: #4E5843; text-decoration: none;" a href="tel:'+tel+'">'+display+'</a></font>'
+					+"<br>"
+				);
+			}
+ 		})
+		.keyup();
+
+		$('.color').click(function() {
+			var colorChange = $(this).attr('style').slice(18,25);
+			$('.logo').css('background', colorChange);
+		});
+
+		$("input").focusout(function(){
+			var inputState = $(this).val();
+			var label = $(this).siblings("label");
+			if (inputState === "") {
+				$(label).removeClass("filled");
+			} else {
+				$(label).addClass("filled");
+			}
+		});
+	});
+	</script>
+</body>
+</html>

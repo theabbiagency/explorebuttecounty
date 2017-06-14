@@ -163,6 +163,10 @@
 					<input type="text" id="phoneinput">
 					<label for="phoneinput">Phone</label>
 				</div>
+				<div class="inputcontainer">
+					<input type="text" id="emailinput">
+					<label for="emailinput">Email</label>
+				</div>
 				<legend>Color Picker</legend>
 				<div class="colorpicker">
 					<div class="color" style="background-color: #EF764A;"></div>
@@ -198,7 +202,8 @@
 					<font color="#4E5843" id="title" style="font-family: arial, sans-serif; font-weight: normal; font-size: 12px; color: #4E5843; letter-spacing: .5px">title</font>
 				</p>
 				<p>
-					<span id="phone"></span>
+					<span color="#4E5843" id="phone"></span>
+					<span color="#4E5843" id="email"></span>
 				</p>
 				<p>
 					<font color="#4E5843"><a style="color: #4E5843; text-decoration: none;" href="http://explorebuttecounty.com">Explore Butte County</a></font><br>
@@ -219,6 +224,10 @@
 			var value = $(this).val();
 			$("#title").text(value);
  		});
+		$("#emailinput").keyup(function() {
+			var value = $(this).val();
+			$("#email").text(value);
+ 		});
 
 		$("#phoneinput").keyup(function() {
 			var value = $(this).val().replace(/\D/g,'').replace(/\s+/g, '');
@@ -231,7 +240,7 @@
 					value = value.slice(0,10);
 				}
 				var tel = "+1"+value
-				var display = value.replace(/(.{4})$/, " $1").replace(/(.{8})$/, " $1");
+				var display = value.replace(/(.{4})$/, "-$1").replace(/(.{8})$/, ") $1").replace(/(.{13})$/, "($1");
 				$("#phone").html(
 					'<font color="#4E5843"><a style="color: #4E5843; text-decoration: none;" a href="tel:'+tel+'">'+display+'</a></font>'
 					+"<br>"
